@@ -19,8 +19,10 @@
     margin-top: 20px;
     font-size: 24px;
   }
-  #resultImage {
+  #resultImage img {
     margin-top: 20px;
+    max-width: 100%;
+    height: auto;
   }
 </style>
 </head>
@@ -35,13 +37,13 @@
     var results = ['大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶'];
     var probabilities = [0.20, 0.30, 0.20, 0.15, 0.10, 0.04, 0.01];
     var images = [
-      'path/to/daikichi.png', // 大吉の画像
-      'path/to/chukichi.png', // 中吉の画像
-      'path/to/shokichi.png', // 小吉の画像
-      'path/to/kichi.png',    // 吉の画像
-      'path/to/suekichi.png', // 末吉の画像
-      'path/to/kyo.png',      // 凶の画像
-      'path/to/daikyo.png'    // 大凶の画像
+      './result/daikichi.png', // 大吉の画像
+      './result/daikichi.png', // 中吉の画像
+      './result/shokichi.png', // 小吉の画像
+      './result/daikichi.png',    // 吉の画像
+      './result/daikichi.png', // 末吉の画像
+      './result/daikichi.png',      // 凶の画像
+      './result/shokichi.png'    // 大凶の画像
     ];
     var result = drawOmikuji(results, probabilities);
     document.getElementById('result').textContent = 'あなたの運勢は… ' + result + '！';
