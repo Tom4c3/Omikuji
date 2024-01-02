@@ -34,16 +34,16 @@
 
 <script>
   document.getElementById('omikujiButton').addEventListener('click', function() {
-    var results = ['大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶'];
-    var probabilities = [0.20, 0.30, 0.20, 0.15, 0.10, 0.04, 0.01];
+    var results = ['デカすぎんだろ吉', 'デカ吉', 'ドカ吉', '大吉', 'ハッピー吉', '狂', '大狂'];
+    var probabilities = [0.02, 0.10, 0.15, 0.4, 0.2, 0.08, 0.05];
     var images = [
-      './result/daikichi.png', // 大吉の画像
-      './result/daikichi.png', // 中吉の画像
-      './result/shokichi.png', // 小吉の画像
-      './result/daikichi.png',    // 吉の画像
-      './result/daikichi.png', // 末吉の画像
-      './result/daikichi.png',      // 凶の画像
-      './result/shokichi.png'    // 大凶の画像
+      './result/dekasugindarokichi.png', // デカすぎんだろ吉の画像
+      './result/dekachi.png', // デカ吉の画像
+      './result/dokakichi.png', // ドカ吉の画像
+      './result/daikichi.png',    // 大吉の画像
+      './result/happykichi.png', // ハッピー吉の画像
+      './result/kyo.png',      // 狂の画像
+      './result/daikyo.png'    // 大狂の画像
     ];
     var result = drawOmikuji(results, probabilities);
     document.getElementById('result').textContent = 'あなたの運勢は… ' + result + '！';
