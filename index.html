@@ -33,22 +33,23 @@
 <div id="resultImage"></div>
 
 <script>
-  document.getElementById('omikujiButton').addEventListener('click', function() {
-    var results = ['デカすぎんだろ吉', 'デカ吉', 'ドカ吉', '大吉', 'ハッピー吉', '狂', '大狂'];
-    var probabilities = [0.02, 0.10, 0.15, 0.4, 0.2, 0.08, 0.05];
-    var images = [
-      './result/dekasugindarokichi.png', // デカすぎんだろ吉の画像
-      './result/dekachi.png', // デカ吉の画像
-      './result/dokakichi.png', // ドカ吉の画像
-      './result/daikichi.png',    // 大吉の画像
-      './result/suekichi.png', // 末吉の画像
-      './result/chukichi.png',      // 中吉の画像
-      './result/daikyo.png'    // 大狂の画像
-    ];
-    var result = drawOmikuji(results, probabilities);
-    document.getElementById('result').textContent = 'あなたの運勢は… ' + result + '！';
-    document.getElementById('resultImage').innerHTML = '<img src="' + images[results.indexOf(result)] + '" alt="' + result + '" />';
-  });
+    document.getElementById('omikujiButton').addEventListener('click', function () {
+        var results = ['デカ吉', '大吉', '中吉', '吉', '小吉', '末吉', '凶'];
+        var probabilities = [0.02, 0.10, 0.15, 0.4, 0.2, 0.08, 0.05];
+        var images = [
+            './result/dekakichi.png', // デカ吉の画像
+            './result/daikichi.png',  // 大吉の画像
+            './result/chukichi.png',  // 中吉の画像
+            './result/kichi.png',     // 吉の画像
+            './result/shokichi.png',  // 小吉の画像
+            './result/suekichi.png',  // 末吉の画像
+            './result/kyo.png'        // 凶の画像
+        ];
+        var result = drawOmikuji(results, probabilities);
+        document.getElementById('result').textContent = 'あなたの運勢は… ' + result + '！';
+        document.getElementById('resultImage').innerHTML = '<img src="' + images[results.indexOf(result)] + '" alt="' + result + '" />';
+    });
+
 
   function drawOmikuji(results, probabilities) {
     var sum = 0;
